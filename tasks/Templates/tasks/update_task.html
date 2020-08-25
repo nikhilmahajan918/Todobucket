@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Task</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: #638cb8;
+    }
+
+    .centered-column {
+      width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .submit {
+      background-color: #6ba3e8;
+    }
+
+    input {
+      border: 1px black solid;
+      padding: 10px 8px 10px 17px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 7px 12px;
+      margin: 8px 0 0 0;
+      box-sizing: border-box;
+    }
+
+
+    input::placeholder {
+      color: #d3d3d3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="centered-column">
+    <h3>Update Task</h3>
+
+    <form method="POST" action="">
+      {% csrf_token %} {{form.title}} {{form.complete}}
+      <input class="btn btn-info" type="submit" value="Update" />
+    </form>
+  </div>
+</body>
+
+</html>
