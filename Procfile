@@ -1,1 +1,1 @@
-web: gunicorn tasks.wsgi --log-file -
+web: gunicorn Todobucket.wsgi --log-file -
